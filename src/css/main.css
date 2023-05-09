@@ -79,7 +79,8 @@ textarea {
 /* minimum style to allow to style meter element */
 meter {
   -webkit-appearance: revert;
-  appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
 }
 
 /* preformatted text - use only for this feature */
@@ -88,6 +89,12 @@ meter {
 }
 
 /* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
 ::placeholder {
   color: unset;
 }
@@ -159,30 +166,6 @@ html {
 }
 
 @-webkit-keyframes fadeAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-ms-keyframes fadeAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadeAnimation {
   from {
     opacity: 0;
   }
@@ -498,9 +481,6 @@ html {
   width: 320px;
   height: 126px;
   -webkit-animation: fadeAnimation 0.7s linear;
-  -moz-animation: fadeAnimation 0.7s linear;
-  -ms-animation: fadeAnimation 0.7s linear;
-  -o-animation: fadeAnimation 0.7s linear;
   animation: fadeAnimation 0.7s linear;
 }
 .header-layer__popup--address .shape-triangle {
@@ -510,7 +490,8 @@ html {
   width: 19px;
   height: 19px;
   background-color: #ffffff;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .header-layer__popup--address .layer-content {
   height: 100%;
@@ -565,9 +546,6 @@ html {
   top: 0;
   right: 172px;
   -webkit-animation: fadeAnimation 0.7s linear;
-  -moz-animation: fadeAnimation 0.7s linear;
-  -ms-animation: fadeAnimation 0.7s linear;
-  -o-animation: fadeAnimation 0.7s linear;
   animation: fadeAnimation 0.7s linear;
 }
 .header-layer__popup--login .shape-triangle {
@@ -577,7 +555,8 @@ html {
   width: 19px;
   height: 19px;
   background-color: #ffffff;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .header-layer__popup--login .btn-login {
   font-family: "Pretendard", sans-serif;
@@ -615,9 +594,6 @@ html {
   top: 0;
   right: 126px;
   -webkit-animation: fadeAnimation 0.7s linear;
-  -moz-animation: fadeAnimation 0.7s linear;
-  -ms-animation: fadeAnimation 0.7s linear;
-  -o-animation: fadeAnimation 0.7s linear;
   animation: fadeAnimation 0.7s linear;
 }
 .header-layer__popup--login-extend .shape-triangle {
@@ -627,7 +603,8 @@ html {
   width: 19px;
   height: 19px;
   background-color: #ffffff;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .header-layer__popup--login-extend .top-area {
   width: 100%;
@@ -877,7 +854,8 @@ body {
 .hero-slider__slides img {
   flex: 1 0 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero-slider__content {
   width: 100%;
@@ -927,11 +905,6 @@ body {
 }
 .dim.hidden {
   -webkit-animation: fadeAnimation 0.7s linear;
-  -moz-animation: fadeAnimation 0.7s linear;
-  -ms-animation: fadeAnimation 0.7s linear;
-  -o-animation: fadeAnimation 0.7s linear;
   animation: fadeAnimation 0.7s linear;
   display: none;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
