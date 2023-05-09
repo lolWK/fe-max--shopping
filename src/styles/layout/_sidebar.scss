@@ -42,7 +42,14 @@
   &__contents {
     transition: all 0.3s;
     width: 320px;
-    overflow: hidden;
+    height: 100%;
+    // overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .wrap {
       transition: all 0.5s ease-in-out;
       display: flex;

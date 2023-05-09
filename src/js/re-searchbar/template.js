@@ -19,7 +19,7 @@ export const template = {
             isLastCategory
               ? `
               <button class="open-lists-btn">
-                <div>모두보기</div>
+                <div>모두 보기</div>
                 <img src="./src/assets/images/icn_chevron_down.svg" alt="" />
               </button>
               `

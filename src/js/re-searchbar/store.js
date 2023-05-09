@@ -4,14 +4,21 @@ export const store = {
   data: {},
   categories: {},
   selectedCategory: null,
+  restCategoriesContent: "",
 
   isSidebarOpen: false,
   isSubSidebarOpen: false,
   isExtendAreaOpen: false,
+  isAllCategoriesOpen: false,
 
   saveData(data) {
     this.data = data;
     this.setCategories();
+    this.setAllCategories();
+  },
+
+  setIsAllCategoriesOpen(value) {
+    this.isAllCategoriesOpen = value;
   },
 
   setCategories() {
@@ -23,13 +30,18 @@ export const store = {
 
   setSelectedCategory({ title, category }) {
     this.selectedCategory = this.data[title][category];
+    
+  },
+
+  setAllCategories() {
+    const restCategories = this.categories["부서별 쇼핑"].slice(4);
   },
 
   getCategories() {
     return this.categories;
   },
 
-  getSeletedCategory() {
+  getSelectedCategory() {
     return this.selectedCategory;
   },
 

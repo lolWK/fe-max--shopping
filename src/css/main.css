@@ -709,7 +709,12 @@ html {
 .sidebar__contents {
   transition: all 0.3s;
   width: 320px;
-  overflow: hidden;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.sidebar__contents::-webkit-scrollbar {
+  display: none;
 }
 .sidebar__contents .wrap {
   transition: all 0.5s ease-in-out;
