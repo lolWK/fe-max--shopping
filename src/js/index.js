@@ -1,18 +1,21 @@
-import { SearchBarInit } from './searchbar/searchBarInit.js';
-import { initHeroSlides } from './hero.js';
-import { initNavLayer } from './layer.js';
+import { SearchBarInit } from "./searchbar/searchBarInit.js";
+import { initHeroSlides } from "./hero.js";
+// import { initNavLayer } from "./layer.js";
 
-import { SideBarInit } from './sidebar/sideBarInit.js';
-import { Data } from './sidebar/sideBarData.js';
-import { Renderer } from './sidebar/renderer.js';
-import { SideBar } from './sidebar/sideBar.js';
+// import { SideBarInit } from "./sidebar/sideBarInit.js";
+// import { Data } from "./sidebar/sideBarData.js";
+// import { Renderer } from "./sidebar/renderer.js";
+// import { SideBar } from "./sidebar/sideBar.js";
 
-import { controller } from './re-searchbar/controller.js';
+import { layerController } from "./layer/controller.js";
 
-const SIDE_BAR_DATA_URL = 'http://localhost:4000/sidebarData';
+import { controller } from "./re-searchbar/controller.js";
+
+const SIDE_BAR_DATA_URL = "http://localhost:4000/sidebarData";
 
 function init() {
-  initNavLayer();
+  layerController.init();
+  // initNavLayer();
   initHeroSlides();
 
   const searchBarInit = new SearchBarInit();
